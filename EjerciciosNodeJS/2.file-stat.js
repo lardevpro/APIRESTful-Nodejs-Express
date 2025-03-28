@@ -7,4 +7,4 @@ console.log(
     stats.isDirectory(),
     stats.isSymbolicLink(),
     stats.size
-)
+ )
