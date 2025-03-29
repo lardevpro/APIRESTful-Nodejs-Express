@@ -1,9 +1,10 @@
-const fs = require('node:fs/promises')
-const path = require('node:path')
+//sistema de módulos
+const fs = require('node:fs/promises')//fileSystem
+const path = require('node:path')//path
 
-const folder = process.argv[2] ?? '.'//acepta nulos y por defecto un .
+const folder = process.argv[2] ?? '.'//process
 
-
+//asincronía secuencial
 async function ls(folder) {
     let files
     try {
@@ -13,7 +14,7 @@ async function ls(folder) {
         process.exit(1)
     }
 
-
+//asincronía en paralelo
 const filesPromises = files.map(async file=>{
     const filePath = path.join(folder,file)
     let status
