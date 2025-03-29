@@ -1,6 +1,7 @@
 //sistema de módulos
 const fs = require('node:fs/promises')//fileSystem
 const path = require('node:path')//path
+const pc = require('picocolors')
 
 const folder = process.argv[2] ?? '.'//process
 
@@ -10,7 +11,7 @@ async function ls(folder) {
     try {
         files = await fs.readdir(folder)
     } catch {
-        console.log(`No se pudo leer el directorio ${folder}`)
+        console.log(pc.red(` No se pudo leer el directorio ${folder}`))
         process.exit(1)
     }
 
@@ -30,7 +31,7 @@ const filesPromises = files.map(async file=>{
     const fileSize = stats.size
     const fileModified = stats.mtime.toLocaleString()
 
-    return `${fileType.padEnd(10)} ${fileSize.toString().padEnd(5)} ${fileModified}`
+    return ` ${pc.blue(fileType)} ${pc.blue(file.padEnd(20))}  ${pc.green(fileSize)}  ${pc.yellow(fileModified)}`
     })
 
     const filesInfo = await Promise.all(filesPromises)
