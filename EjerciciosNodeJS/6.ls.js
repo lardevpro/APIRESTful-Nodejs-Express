@@ -1,9 +1,8 @@
-const { error } = require('console')
-const fs = require('node;fs')
+
+const fs = require('node:fs')
 
 fs.raddir('.',(error,files)=>{
     if(error){
-      
     }
 
     files.array.forEach(files => {
