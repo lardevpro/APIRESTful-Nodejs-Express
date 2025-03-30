@@ -1,5 +1,7 @@
 # Códigos de Estado HTTP
 
+Puedes revisarlos aquí de forma divertida y gráfica ---> https://http.cat/
+
 Los códigos de estado HTTP son una parte fundamental de la comunicación entre el cliente y el servidor. Estos códigos indican si la solicitud fue exitosa, si hubo un error y la naturaleza de ese error.
 
 ## 1xx: Informativo
