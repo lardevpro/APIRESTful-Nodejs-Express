@@ -1,18 +1,16 @@
 const http = require('node:http')
-const {findAvaliblePort} = require('./10.free-port.js')
 
+const desiredPort = process.env.PORT ?? 1234
 
-const server = http.createServer((req, res)=>{
-    console.log('request recived')
+const server = http.createServer((req, res)=>{ 
+    console.log('request recived: ',req.url)
+    console.log('request recived') //esto se ejecuta cuando se recibe una req (callback)
     res.end('Hola mundo')
 })
 
-findAvaliblePort(8080).then(port=> {
-    server.listen(port, () => {
-        console.log(`server listeneng on port http://localhost:${port}`)
-    })
+
+server.listen(desiredPort, () => {
+    console.log(`server listeneng on port http://localhost:${desiredPort}`)
 })
 
-// server.listen(3000,()=>{
-//     console.log(`Server listening on port http://localhost:${server.address().port}`)
-// })
+
