@@ -1,3 +1,5 @@
+![node-js-736399_1280](https://github.com/user-attachments/assets/53989622-b805-4fa1-a723-58bd0f9b99c8)
+
 # Curso de Node.js 🚀
 
 Este repositorio contiene los apuntes y ejercicios basados en el **Curso de Node.js** de **midudev**. A lo largo del curso, se exploran conceptos clave de Node.js y Express para desarrollar aplicaciones backend modernas.
@@ -36,4 +38,4 @@ Este repositorio servirá como referencia para repasar los conceptos aprendidos 
 ¡A seguir aprendiendo! 🚀
 
 
-![node-js-736399_1280](https://github.com/user-attachments/assets/53989622-b805-4fa1-a723-58bd0f9b99c8)
+
