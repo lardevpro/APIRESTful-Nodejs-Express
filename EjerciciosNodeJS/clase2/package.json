@@ -4,7 +4,8 @@
   "description": "",
   "main": "1.http.js",
   "scripts": {
-    "dev" : "nodemon 1.http.js",
+    "dev": "nodemon 1.http.js",
+    "devExpress" :"node --watch 3.express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,5 +17,8 @@
   },
   "eslintConfig": {
     "extends": "standard"
+  },
+  "dependencies": {
+    "express": "5.1.0"
   }
 }
