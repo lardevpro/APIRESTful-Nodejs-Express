@@ -21,6 +21,17 @@ Las API REST deben cumplir con ciertos principios fundamentales:
 5. **Sistema en capas**: REST permite que una API tenga múltiples capas de arquitectura, mejorando la escalabilidad y seguridad.
 6. **Código bajo demanda (Opcional)**: En algunos casos, REST permite que el servidor envíe código ejecutable al cliente, como scripts o applets.
 
+## Los Seis Pilares de la Arquitectura REST
+
+La arquitectura REST se basa en seis principios fundamentales que garantizan su eficiencia y escalabilidad:
+
+1. **Cliente-Servidor**: Se establece una separación entre el cliente y el servidor, lo que permite una mayor flexibilidad y escalabilidad en el desarrollo de aplicaciones.
+2. **Sin estado (Stateless)**: Cada solicitud HTTP debe contener toda la información necesaria para procesarla, sin depender de ninguna sesión almacenada en el servidor.
+3. **Capacidad de Caché**: Los datos de respuesta pueden ser almacenados en caché por el cliente o servidores intermedios para mejorar el rendimiento y reducir la carga en la red.
+4. **Interfaz Uniforme**: Todas las interacciones entre el cliente y el servidor siguen un conjunto estándar de reglas, facilitando la comprensión y la interoperabilidad.
+5. **Sistema en Capas**: La arquitectura permite el uso de múltiples capas intermedias, como balanceadores de carga y proxies, sin afectar la comunicación entre cliente y servidor.
+6. **Código Bajo Demanda (Opcional)**: En algunos casos, el servidor puede proporcionar código ejecutable al cliente, como JavaScript, para ampliar la funcionalidad sin necesidad de nuevas solicitudes.
+
 ## REST en la actualidad
 
 Hoy en día, REST es uno de los enfoques más utilizados para el desarrollo de APIs web, especialmente en aplicaciones modernas que requieren escalabilidad y facilidad de integración con otros sistemas. Frameworks y tecnologías como Spring Boot (Java), Express.js (Node.js) y Django (Python) permiten la creación de APIs REST de manera eficiente y estructurada.
