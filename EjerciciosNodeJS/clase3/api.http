@@ -15,13 +15,23 @@ POST http://localhost:1234/movies
 Content-Type: application/json
 
    {
-     "title": "La vida es bella",
-     "year": 1997,
+     "title": 123,
+     "year": "",
      "director": "Roberto Benigni",
      "duration": 116,
      "poster": "https://image.tmdb.org/t/p/original/aZ7MFlKPfB02Lr9NwZQ4vsYRgcy.jpg",
      "genre": [
        "Drama",
-       "Comedy"
+       "Comedy",
+       "parody"
     ]
  }
+
+
+### modificar una película filtrando por id
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 1993
+}

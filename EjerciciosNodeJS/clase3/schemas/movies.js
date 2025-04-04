@@ -26,5 +26,9 @@ const z = require('zod')
         return movieSchema.safeParseAsync(object) //safeParse devuelve si la operación tuvo éxito
     }
 
+    function validatePartialMovie (object) {
+        return movieSchema.partial().safeParse(object) // partial si no está no le da importancia, si está me la valida
+    }
 
-    module.exports = { validateMovie }
+
+    module.exports = { validateMovie, validatePartialMovie }
