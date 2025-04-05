@@ -10,8 +10,23 @@ const app = express()
 app.use(express.json()) // middleware
 app.disable('x-powered-by')
 
+
+const ACEPTED_ORGINS = [ //URL que decido aceptar
+    'http://127.0.0.1:5500',
+    'http://localhost:1234',
+    'http://localhost:5500',
+    'http://movies.com',
+]
+
+
 // listar todas las películas por género
 app.get('/movies', (req, res) => {
+    const origin = req.get('origin') // recuperacion del header origin de la peticion
+    
+    if (ACEPTED_ORGINS.includes(origin) || !origin) {  // si no hay cabecera es porque se hace la petición desde el mismo servidor
+        res.header('Access-Control-Allow-Origin', origin) // '*' le estamos dejando que cualquiera tenga acceso ( se podría poner para una url especifica ) 
+    }
+
     const { genre } = req.query
     if (genre) {
         const filteredMovies = movies.filter(
@@ -55,6 +70,27 @@ app.get('/movies', (req, res) => {
 res.json(movies)
 })
 
+// eliminar peliculas
+app.delete('/movies/:id', (req, res) => {
+    const origin = req.get('origin')
+
+    if (ACEPTED_ORGINS.includes(origin) || !origin) {  // si no hay cabecera es porque se hace la petición desde el mismo servidor
+        res.header('Access-Control-Allow-Origin', origin) // '*' le estamos dejando que cualquiera tenga acceso ( se podría poner para una url especifica ) 
+    }
+
+
+    const { id } = req.params
+    const movieIndex = movies.findIndex(movie => movie.id == id)
+
+    if (movieIndex === -1) {
+        return res.status(404).json({ message: 'Movie file found'})
+    }
+
+    movies.splice(movieIndex, 1)
+
+    return res.json({ message: 'Movie deleted'})
+
+})
 
 //modificar una película
 app.patch('/movies/:id', async (req, res) => {
