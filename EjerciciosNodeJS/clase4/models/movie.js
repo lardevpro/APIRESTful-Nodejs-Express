@@ -1,6 +1,5 @@
 import { randomUUID } from 'node:crypto'
-const require = createRequire(import.meta.url)
-const movies = require('./movies.json')
+import movies from '../movies.json' assert { type: 'json' };
 
 
 export class MovieModel {
