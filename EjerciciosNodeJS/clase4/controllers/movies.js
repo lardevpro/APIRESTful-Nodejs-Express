@@ -1,4 +1,5 @@
-import { MovieModel } from "../models/movie.js"
+import { MovieModel } from '../models/movie.js'
+import { validatePartialMovie } from '../schemas/movies.js'
 
 export class MovieController  {
 
@@ -19,7 +20,7 @@ export class MovieController  {
 
   // create
   static async createMovie (req ,res) {
-     const result = await validateMovie(req.body)
+     const result = validatePartialMovie(req.body)
       
      if (!result.success){
          return res.status(400).json({ error: JSON.parse(result.error.message) })

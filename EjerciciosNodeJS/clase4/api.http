@@ -4,7 +4,7 @@ GET http://localhost:1234/movies
 
 ### Recuperar una pelicual
 
-GET http://localhost:1234/movies/28b2205e-f293-4d66-b4d4-ab6e406a9656
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 
 ### Recuperar todas las películas por género
 
@@ -32,5 +32,5 @@ PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 Content-Type: application/json
 
 {
-  "year": 1992
+  "year": 1900
 }

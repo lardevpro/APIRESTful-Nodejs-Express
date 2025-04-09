@@ -11,6 +11,6 @@ moviesRouter.get('/:id', MovieController.getById)
 // create
 moviesRouter.post('/', MovieController.createMovie)
 // delete
-moviesRouter.delete('/:id',MovieController.deleteMovie)
+moviesRouter.delete('/:id', MovieController.deleteMovie)
 // update movie
-moviesRouter.patch('/movies/:id',MovieController.updateMovie)
+moviesRouter.patch('/:id',MovieController.updateMovie)

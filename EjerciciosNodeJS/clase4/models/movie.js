@@ -23,10 +23,6 @@ export class MovieModel {
             id: randomUUID(), 
             ...input
           } 
-        
-         
-          res.status(201).json(newMovie)
-
           return newMovie
     }
 
@@ -38,7 +34,7 @@ export class MovieModel {
     }
 
     static async update ({ id, input }){
-        const movieIndex = movies.find(movie => movie.id == id)
+        const movieIndex = movies.findIndex(movie => movie.id == id)
         if(movieIndex == -1) return false
 
         movies [movieIndex] = {
