@@ -34,7 +34,7 @@ Este repositorio contiene un proyecto en **Node.js**. Explora conceptos clave de
 
 1. Clona este repositorio:
    
-       git clone https://github.com/tu-usuario/proyecto-node-express.git
+       git clone https://github.com/lardevpro/APIRESTful-Nodejs-Express.git
 
 2. Navega al directorio del proyecto:
    
