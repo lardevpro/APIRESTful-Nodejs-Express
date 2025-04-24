@@ -39,17 +39,19 @@ git clone https://github.com/tu-usuario/proyecto-node-express.git
 2. Navega al directorio del proyecto:
    
 cd proyecto-node-express
-Instala las dependencias:
 
+3. Instala las dependencias:
 
 npm install
 
 Para ejecutar el servidor, puedes usar Nodemon:
 
 nodemon app.js
+
 O si prefieres usar la opción experimental de --watch:
 
 node --watch app.js
+
 📝 Contribuciones
 Si deseas contribuir, por favor abre un issue o envía un pull request.
 
