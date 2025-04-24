@@ -34,23 +34,23 @@ Este repositorio contiene un proyecto en **Node.js**. Explora conceptos clave de
 
 1. Clona este repositorio:
    
-git clone https://github.com/tu-usuario/proyecto-node-express.git
+       git clone https://github.com/tu-usuario/proyecto-node-express.git
 
 2. Navega al directorio del proyecto:
    
-cd proyecto-node-express
+       cd proyecto-node-express
 
 3. Instala las dependencias:
 
-npm install
+       npm install
 
 Para ejecutar el servidor, puedes usar Nodemon:
 
-nodemon app.js
+    nodemon app.js
 
 O si prefieres usar la opción experimental de --watch:
 
-node --watch app.js
+    node --watch app.js
 
 📝 Contribuciones
 Si deseas contribuir, por favor abre un issue o envía un pull request.
