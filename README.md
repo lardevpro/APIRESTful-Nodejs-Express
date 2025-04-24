@@ -52,8 +52,10 @@ O si prefieres usar la opción experimental de --watch:
 
     node --watch app.js
 
-📝 Contribuciones
-Si deseas contribuir, por favor abre un issue o envía un pull request.
+📝 Contribuciones:
+   
+   
+   Si deseas contribuir, por favor abre un issue o envía un pull request.
 
 
 
